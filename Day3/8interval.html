@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/css"></script>
+</head>
+<body>
+<input type="button" value="interval" onclick="clear1();"/>
+<br/>
+<input type="button" value="timeout" onclick="clear2();"/>
+<script type="text/javascript">
+/*   /!* setInterval("alert('123');",3000);*!/
+    setTimeout("alert('123'),1000");*/
+//clearinteval
+var id1= setInterval("alert('1356')",3000);
+var id2 =setTimeout("alert('165156')",4000);
+function clear1() {
+clearInterval(id1);
+}
+function clear2() {
+clearTimeout(id2);
+}
+
+
+</script>
+
+
+</body>
+</html>
