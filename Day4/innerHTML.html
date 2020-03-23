@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        #div1{
+            width: 200px;
+            height: 140px;
+            border: 2px dashed red;
+        }
+    </style>
+</head>
+<body>
+<span id="sp1">JavaWeb</span>
+<div id="div1">
+
+
+</div>
+<script type="text/javascript">
+var sp1 =document.getElementById("sp1");
+alert(sp1.innerHTML);
+//在div里设置内容
+//获取div
+   var div1= document.getElementById("div1");
+   //设置内容
+var tab ="<table border='1' ><tr><td>AAAAAAAA</td></tr><tr><td>BBBBBBBBBBBBB</td></tr></table>";
+div1.innerHTML = tab;
+</script>
+</body>
+</html>

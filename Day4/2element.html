@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/css"></script>
+</head>
+<body>
+<input type="text" id="inputid" class="class1" value="JavaCore" name="input1">
+        <script type="text/javascript">
+    //先获取input标签
+    var input1 = document.getElementById("inputid");
+    input1.setAttribute("class","class2");
+    alert(input1.getAttribute("class"));
+    alert(input1.getAttribute("name"));
+    input1.removeAttribute("name");
+
+
+</script>
+
+
+</body>
+</html>

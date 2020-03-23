@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css"></style>
+</head>
+<body>
+<div id="d1" style="float: left">
+<select multiple="multiple" id="s1" style="width: 100px;height: 200px">
+    <option>AAA</option>
+    <option>BBB</option>
+    <option>CCC</option>
+    <option>DDD</option>
+    <option>EEE</option>
+
+</select>
+<div>
+<input type="button" value="选中添加到右边" onclick="putRightSelected();"><br/>
+<input type="button" value="全部添加到右边" onclick="putRightAll();">
+</div>
+</div>
+<div id="d2">
+<select multiple="multiple" id="s2" style="width: 100px;height: 200px">
+    <option>YYY</option>
+</select><div>
+<input type="button" value="选中添加到左边" onclick="putLeftSelected();"><br/>
+<input type="button" value="全部添加到左边" onclick="putLeftAll();">
+</div></div>
+
+<script type="text/javascript">
+/*
+1.获取select里的option
+-getElementsBuTagName()返回数组
+-遍历数组，得到每一个option
+2.判断是否被选中
+-属性selected
+3.选中，放到右边
+4.得到select2
+5.添加选择方法
+-appendchild()
+ */
+//获取select1的option
+function putRightSelected() {
+    var select2 = document.getElementById("s2");
+    var select1 = document.getElementById("s1");
+    var option = select1.getElementsByTagName("option");
+    for (var i = 0; i < option.length; i++) {
+        var option1 = option[i];
+        //判断是否被选中
+        if (option1.selected == true) {
+            select2.appendChild(option1);
+            i--;
+        }
+    }
+}
+function putRightAll() {
+var select21 = document.getElementById("s1");
+var select22 = document.getElementById("s2");
+var option21 = select21.getElementsByTagName("option");
+for(var j=0;j<option21.length;j++){
+  select22.appendChild(option21[j]);
+    j--;
+}
+}
+function putLeftSelected() {
+var select31= document.getElementById("s1");
+var select32= document.getElementById("s2");
+var option3= select32.getElementsByTagName("option");
+for (var n=0;n<option3.length;n++) {
+    if (option3[n].selected == true) {
+        select31.appendChild(option3[n]);
+        n--;
+    }
+
+}}
+function putLeftAll() {
+var  select41 = document.getElementById("s1");
+var  select42 = document.getElementById("s2");
+var option4 = select42.getElementsByTagName("option");
+for(m=0;m<option4.length;m++){
+    select41.appendChild(option4[m]);
+    m--;
+}
+}
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/css"></script>
+</head>
+<body>
+<!--生成列表-->
+<!--ul添加id来获取到ul-->
+<ul id="ul1">
+    <li>1000</li>
+    <li>2000</li>
+    <li>3000</li>
+    <li>4000</li>
+</ul>
+<br/>
+<input type="button" value="add" onclick="add();">
+
+<script type="text/javascript">
+    //在末尾添加节点
+    function add() {
+    var ul1 =document.getElementById("ul1");
+    //1.创建标签、
+    var li1 =document.createElement("li");
+    var text1 = document.createTextNode("text");
+    //添加节点
+    li1.appendChild(text1);
+    ul1.appendChild(li1);
+    }
+
+
+</script>
+
+</body>
+</html>

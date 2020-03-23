@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css"></style>
+</head>
+<body>
+<input type="checkbox" id="box" onclick="setAllorNo();">全选or全不选
+<br/>
+<input type="checkbox" name="hobbies">篮球
+<input type="checkbox" name="hobbies">排球
+<input type="checkbox" name="hobbies">羽毛球
+<input type="checkbox" name="hobbies">乒乓球
+<br/>
+<input type="button" value="全选" onclick="setAll();">
+<input type="button" value="全不选" onclick="setNone();">
+<input type="button" value="不全选" onclick="setNeg();">
+
+<script type="text/javascript">
+//全选
+    function setAll() {
+    /*1.获取要操作的复选框
+    2.返回数组
+    3.用checked判断是否选中
+    4.遍历
+     */
+var hobby = document.getElementsByName("hobbies");
+for(var i=0;i<hobby.length;i++){
+    var hobby1=hobby[i];
+    hobby1.checked =true;
+}
+
+    }
+function setNone() {
+var hobby=document.getElementsByName("hobbies");
+for(var i=0;i<hobby.length;i++){
+    var hobby2 = hobby[i];
+    hobby2.checked = false;
+}}
+
+
+function setNeg() {
+var hobby =document.getElementsByName("hobbies");
+    for(var i=0; i<hobby.length;i++){
+    if (hobby[i].checked == true) {hobby[i].checked=false;}
+    else hobby[i].checked =true;
+
+    }
+}
+function setAllorNo() {
+var check1= document.getElementById("box");
+if(box.checked==true){
+    setAll();
+}
+else setNone();
+
+}
+
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css"></style>
+</head>
+<body>
+<ul id="ul1">
+    <li id="li1">西施</li>
+    <li id="li2">王昭君</li>
+    <li id="li3">貂蝉</li>
+    <li id="li4">杨玉环</li>
+</ul>
+<input type="button" value="insert" onclick="insert()">
+<script type="text/javascript">
+function insert() {
+/*
+* 1.获取li3的标签
+* 2.创建li
+* 3.创建文本
+* 4.把文本放进li
+* 5.获取ul
+* 6.把li添加到ul下
+* */
+var li3 = document.getElementById("li3");
+var li5 = document.createElement("li");
+var text5 = document.createTextNode("新垣结衣");
+li5.appendChild(text5);
+var ul1 =document.getElementById("ul1");
+ul1.insertBefore(li5,li3);
+
+
+
+}
+
+
+</script>
+</body>
+</html>

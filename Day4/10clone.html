@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css"></style>
+</head>
+<body>
+<ul id="ul41">
+    <li id="li1">西施</li>
+    <li id="li2">王昭君</li>
+    <li id="li3">貂蝉</li>
+    <li id="li4">杨玉环</li>
+</ul>
+<div id="div1">
+
+
+</div>
+<input type="button" value="copy" onclick="copy1();">
+<script type="text/javascript">
+function copy1() {
+    var ul41= document.getElementById("ul41");
+    var copy =ul41.cloneNode(true);
+    var div1=document.getElementById("div1");
+    div1.appendChild(copy);
+
+}
+
+
+</script>
+
+</body>
+</html>
