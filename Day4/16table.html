@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css"></style>
+</head>
+<body>
+行：<input type="text" id="h">
+列：<input type="text" id="l">
+<br>
+<input type="button" value="制作" onclick="add2()">
+<div id="div1"></div>
+<script type="text/javascript">
+function add2() {
+/*
+1.得到行和列
+2.生成表格
+** 循环行
+** 循环列
+3.显示到页面上
+-把表格的代码设置到div里面
+-使用innerHTML属性
+*/
+    var h=document.getElementById("h").value;
+    var l= document.getElementById("l").value;
+    var tab="<table border='1'>";
+    for(var i=1;i<=h;i++){
+        tab+="<tr>";
+        for(var j=1;j<=h;j++){
+            tab+="<td>AAAAAAAAAAAA";
+            tab+="</td>";
+        }
+        tab+="</tr>";
+    }
+    tab+="</table>"
+    var div1= document.getElementById("div1");
+    div1.innerHTML=tab;
+
+
+}
+
+
+</script>
+
+
+</body>
+</html>

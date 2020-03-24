@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css"></style>
+</head>
+<body>
+<select id="country" onchange="add1(this.value);">
+<option value="0">--请选择--</option>
+<option value="中国">中国</option>
+<option value="美国">美国</option>
+<option value="日本">日本</option>
+<option value="德国">德国</option>
+</select>
+<select id="city"></select>
+
+<script type="text/javascript">
+    //创建一个数组来存储数据
+    var arr=new Array(4);
+    //二维数组
+    arr[0]=["中国","上海","北京","广州","深圳","苏州"];
+    arr[1]=["美国","华盛顿","加利福尼亚","阿拉斯加","新泽西","芝加哥"];
+    arr[2]=["日本","东京","大阪","京都","北海道","千叶"];
+    arr[3]=["德国","柏林","法兰克福","汉堡","慕尼黑"];
+
+function add1(val) {
+//alert("你点击啦");
+/*1.遍历二维数组
+* 2.得到也是一个数组
+* 3.拿到数组中的第一个值和传递过来的值比较
+* 4.如果相同，获取第一个值后面的元素
+* 5.得到city的select
+* 6.添加用 appendchild
+* */
+//每次添加之前判断city 是否有option
+var city = document.getElementById("city");
+//得到city里的option
+var option1= city.getElementsByTagName("option");
+for(var m=0;m<option1.length;m++){
+    var op =option1[m];
+    city.removeChild(op);
+    m--;
+}
+
+for(var i=0;i<arr.length;i++){
+var arr1 = arr[i];
+var firstvalue = arr1[0];
+if(firstvalue==val){
+    for(var j=1;j<arr1.length;j++){
+        /*alert(arr1[j]);*/
+        var value1 =arr1[j];
+        var option1=document.createElement("option");
+        var text1=document.createTextNode(value1);
+        option1.appendChild(text1);
+        city.appendChild(option1);
+    }
+
+}
+}
+
+
+
+
+}
+
+
+
+
+</script>
+
+</body>
+</html>
