@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://www.w3schools.com"
+           xmlns="http://www.w3schools.com"
+           elementFormDefault="qualified">
+    <element name="person">
+        <complexType>
+            <!--<sequence>-->
+                <!--<all>-->
+           <!-- <choice>-->
+            <sequence>
+                <element name="name" type="string" maxOccurs="unbounded"></element>
+                <element name="age" type="int" maxOccurs="1"></element>
+            </sequence>
+           <!-- </choice>-->
+                <!--</all>-->
+            <!--</sequence>-->
+        </complexType>
+    </element>
+
+</schema>
